@@ -5,7 +5,9 @@ Adding a header view to a table view
 ![header view](https://user-images.githubusercontent.com/1819208/103038142-acd59e80-453b-11eb-9181-56a6371956b5.png)
 
 
-## Adding a custom Header View to a Table View 
+## Adding a custom Header View to a Table View in your View Controller
+
+`mainView` is a subclass of a `UIView` that has the Table View, the table view could have also just been added directly to the View Controller, here this is used for illustration purposes in the case you want to add more UI elements to `MainView`
 
 ```swift 
 mainView.tableView.tableHeaderView = headerView
