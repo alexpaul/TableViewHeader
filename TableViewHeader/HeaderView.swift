@@ -10,7 +10,7 @@ import UIKit
 class HeaderView: UIView {
   static let reuseIdentifier = "headerView"
   
-  public lazy var textLabel: UILabel = {
+  public var textLabel: UILabel = {
     let label = UILabel()
     label.text = "Header View"
     label.textAlignment = .center
@@ -20,7 +20,6 @@ class HeaderView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300))
-    //super.init(frame: frame)
     commonInit()
   }
   

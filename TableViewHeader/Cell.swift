@@ -10,8 +10,5 @@ import UIKit
 
 class Cell: UITableViewCell {
   static let reuseIdentifier = "cell"
-  
-  
-  
 }
 

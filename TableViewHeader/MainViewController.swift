@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
     mainView.tableView.tableHeaderView = headerView
     mainView.tableView.dataSource = self
     mainView.tableView.delegate = self
-
   }
 }
 
@@ -33,8 +32,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
-      fatalError()
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as? Cell else {
+      fatalError("could not dequeue cell")
     }
     return cell
   }
@@ -42,13 +41,5 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 150
   }
-  
-//  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//    return 400
-//  }
-//
-//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//    return HeaderView()
-//  }
 }
 
