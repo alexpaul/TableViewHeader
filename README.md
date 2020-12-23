@@ -58,10 +58,11 @@ class HeaderView: UIView {
 
 </details> 
 
-## Getting the height for the Header View 
+## Setting the frame of the Header View 
 
 ```swift 
-func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-  return 150
+override init(frame: CGRect) {
+  super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300))
+  commonInit()
 }
 ```
