@@ -19,7 +19,10 @@ class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mainView.tableView.register(Cell.self, forCellReuseIdentifier: "cell")
+    
+    // comment to get stationary header view
     mainView.tableView.tableHeaderView = headerView
+    
     mainView.tableView.dataSource = self
     mainView.tableView.delegate = self
   }
@@ -41,5 +44,18 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 150
   }
+  
+  // uncomment to get stationary header view
+  // optional for non-scrollable header view
+  
+  /*
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    return HeaderView()
+  }
+  
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 300
+  }
+   */
 }
 
